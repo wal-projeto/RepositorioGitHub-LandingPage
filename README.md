@@ -1,5 +1,5 @@
 # LandingPage
-<!-- 
+
 APRENDENDO A COMMITAR O PROJETO NO GITHUB
 1-  criamos um repositorio no GitHub com um arquivo READ.md
 2-  Abrimos o VS code e abrimos o nosso projeto - Projeto_Landingpage - abrimos o terminal- testamos se o git esta instalado como o comando git -v
@@ -28,5 +28,3 @@ Se você quer incluir o repositório como um submódulo:
 Remova-o da área de stage com:
 Adicione-o como submódulo com:
 Se precisar de mais ajuda para resolver isso, é só avisar!
-
--->
