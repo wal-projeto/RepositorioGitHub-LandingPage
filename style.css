@@ -1,0 +1,62 @@
+*{
+    margin: 5px;
+    font-family: 'inter';
+    
+#logo{
+    margin-left: 50px;
+    margin-top: 50px
+    
+}   
+
+#titulo-superior{
+    margin-left: 150px;
+    margin-top: 50px;
+
+}
+#titulo-paragrafo{
+    margin-left: 150px;
+    margin-top: 25px;
+    padding-bottom: 100px; /*espaçamento entre o parágrafo e o final do menu*/
+}
+
+#menusuperior{
+    background-image: url(imagens/imagem-fundo1.svg);
+    color: aliceblue;
+
+}
+#menuinformacional{
+    background-color: #eaece5;
+    display: grid;
+    grid-auto-flow: column;
+    columns: auto;
+}
+
+.icones{
+    margin: 50px 0px 50px 150px;
+    padding: 25px;
+}
+.textoinformativo{
+    display: flex;
+    align-items: center;
+}
+
+#secaovideo{
+    display: grid;
+    grid-auto-flow: column;
+    columns: auto;
+}
+
+#titulovideo{
+    color: #247BA0;
+}
+
+#textovideo{
+
+}
+
+
+
+
+
+
+}
