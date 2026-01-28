@@ -1,55 +1,142 @@
+<!--html 5-> estrutura basica do html : como Live Server instalado, tecla de atalho Alt + o,  
+posso abrir essa pagina Web que estou construindo no browser,  -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+<!--O html é dividido em 2 sesoes: 
+head: esse bloco é carregado antes da pagina Web ser carregada no browser-->
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--links de fontes do google font https://fonts.google.com/?query=inter-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!--se clico ctrol e no nome style.css ele ja cria o aquivo no meu diretorio-->
     <title>Projeto-FIGMA</title>
 </head>
 
-<body>
-    <!-- MENU SUPERIOR -->
+<!--body: É tudo que aparece na pagina Web. por isso que é necessario carregar 
+antes o head, pois as fontes e estilos definidos no css ja devem ter
+sido carregadas para que as informacoes no body possam ser exebidas corretamente com as fontes e estilos definidos no arquivo style.css-->
+<body>   
+    <!-- MENU SUPERIOR : temos varios id para estilizar cada tag no aqriuivo CSS
+      (da imagem, do tituto superior e o titulo paragrafo)
+
+    a href= cria um hiperlink que direciona ao clicar na imagem para a pagina escoladnc.com.br
+    <a href="https://www.escoladnc.com.br//" LINK> </a>  <-- o LINK é a palavre que aparece na pagina clicavel, 
+    pode ser uma imagem ou um texto, nesse caso é uma imagem <img src="caminho da imagem" alt="descrição da imagem">  
+    src = é o caminho que diz a imagem esta
+    --> 
     <div id="menusuperior"> 
-        <a href="https://www.escoladnc.com.br//"> <img src="imagens/logo.svg" id="logo" alt="Logo DNC"> </a>   
+        <a href="https://www.escoladnc.com.br//"> <img src="imagens/logo.svg" id="logo" alt="Logo DNC"> </a>  
         <h1 id="titulo-superior"> Dê os primeiros passos da <br> sua carreira em Tecnologia</h1>
         <p id="titulo-paragrafo"> Inscreva-se no curso gratuito de Introdução à <br>
             Tecnologia da DNC School aprenda os principais <br>
             fundamentos para construir experiências efetivas.</p>     
     </div>
 
-    <!-- MENU INFORMATIVO -->
-    <div id="menuinformacional">
+
+
+    <!-- MENU INFORMACIONAL : ao construir o menu informacional notamos que será necessario quebrar o 
+    código em partes menores para facilitar a leitura e manutenção, por isso utilizaremos as div.
+    Tambem usaremos classes para estilizar os icones e textoinformativos. 
+    e trabalharemos com as GRID (aquivo GRID_OrganizacaoDePagina.jpg) para alinhar os itens em colunas e centraliza-los.
+     -->
+    <div id="menuinformacional"> <!-- estou colocando as imagens dentro do paragrafo, por isso
+        aparece primeiro a imgem depois o texto , se eu inverter, aparece o texto depois a imagem:
+        <p class="textoinformativo">  Certificado de conclusão  <img src="icones/certificado.svg" class="icones" alt=""> </p> -->
         <p class="textoinformativo"> <img src="icones/certificado.svg" class="icones" alt=""> Certificado de conclusão </p>
         <p class="textoinformativo"> <img src="icones/relogio.svg" class="icones"  alt=""> 4 horas de conteúdo </p>
         <p class="textoinformativo"> <img src="icones/camera.svg" class="icones" alt=""> Aulas online gravadas </p>
     </div>
 
-    <!--  SEÇÃO VIDEO -->
+
+
+    <!--  SEÇÃO VIDEO: Ao trabalhar com GRID significa que cada div ficará dentro de uma coluna, por isso o video ficou a esquerda e os
+        textos a direita-->
     <div id="secaovideo">
-        <iframe width="502" height="283" src="https://www.youtube.com/embed/ITxGkd9h4n4" title="DNC - A escola inovadora que forma profissionais de alta perfomance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div>
-            <h1 id="titulovideo">
-            Aprenda com especialistas e <br> 
-            comece seu primeiro projeto. <br><br>
-            </h1>
-            <p id="textovideo">
-                Conheça o processo de desenvolvimento e entenda como utilizar os <br>
-                principais métodos e ferramentas da área para <br> 
-                resolver problemas complexos. <br><br>
-                Conquiste seu certificado e desenvolva um projeto prático para aplicar seus conhecimentos.
-            </p>
-        </div>
-        
+        <!--Inserindo um video do YouTube: clicamos com botao direito emcima dele e selecionamos " <criar codigo de 
+        incorporacao > " depois é so colar aqui no codigo  <iframe width ... >  width="502" height="283" são os tamanhos padrão-->  
+        <iframe id= "video" width="702" height="387" src="https://www.youtube.com/embed/ITxGkd9h4n4" title="DNC - A escola inovadora que forma 
+        profissionais de alta perfomance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       
+    <div>
+        <h1 id="titulovideo"> <!--usando a tag h1 para o titulo do video-->
+        Aprenda com especialistas e <br> 
+        comece seu primeiro projeto. <br><br> 
+        </h1>
+            
+        <p id="textovideo"> <!--usando a tag p para o texto-->
+            Conheça o processo de desenvolvimento e entenda como utilizar os <br>
+            principais métodos e ferramentas da área para <br> 
+            resolver problemas complexos. <br><br> <!-- usando <br> para pular linhas -->
+
+            Conquiste seu certificado e desenvolva um projeto prático para aplicar seus conhecimentos.
+        </p>
+    </div>  
     </div>
 
 
 
+    <!-- SEÇÃO O CARROSSEL  : vamos criar GRID(em 2 colunas) para organizar a seção, olhar o aquivo
+     imagens/GRID_CARROSSEL.jpg-->
+    <div id="carrossel">
+        <!--usando a tag h1 para o titulo do carrossel-->
+        <h1 id="titulo-carrossel"> Mais de 500 alunos já iniciaram seus estudos</h1>
+
+            <!--DIVISÃO DOS CARDS: criando uma div para agrupar os cards do carrossel-->
+        <div id="divcards"> 
+    <!--AGORA VAMOS INICICAR COM O ARQUIVO index.js e utilizar o JAVASCRIP e manipulação de DOM,
+     utilizaremos variaveis atribuindo o  id e funcao com onclick-->
+                <img id="seta-esquerda" onclick="rolarParaEsquerda()"  class="seta"  src="./icones/seta-esquerda.svg" alt="">
+                <img id="leonardo" class="cards"  width="802" height="687" src="./cards/leonardo.svg" alt="cardLeonardo" >
+                <img id="samanta"  class= "cards" width="802" height="687" src="./cards/samanta.svg" alt="cardSamanta">
+                <img id="bruna" class= "cards" width="802" height="687" src="./cards/bruna.svg" alt="cardBruna">
+                <img id="seta-direita" onclick= "rolarParaDireita()"  class="seta"  src="./icones/seta-direita.svg" alt="">
+        </div>    
+    </div>  
+
+
+
+    <!--FORMULARIO : VAMOR CRIAR, CAPTURAR OS DADOS DIGITADOS E GUARDA-LOS EM UMA PLANILHA DO EXCEL -->
+    <div id = "formulario">
+        <h1 id="titulo-formulario"> Comece agora mesmo a dê o próximo passo na sua carreira</h1>
+        
+        <form action="https://api.sheetmonkey.io/form/qtF6jBXGwArZR6w5CxrEwv " method="post">
+            <input type="text" placeholder="Nome" name="Nome" required> <br>
+            <input type="email" placeholder="Email" name="Email" required> <br>
+            <input type="number" placeholder="Telefone" name="Telefone" required> <br>
+            <input type="hidden" name="Data" value="x-sheetmonkey-current-date-time" /> <!--captura a data e hora do sistema-->
+            <button type="submit" > Acesse ementa gratis</button>
+
+        </form> 
+
+        <!-- Formulário - Integração com uma planilha atraves do o https://sheetmonkey.io/pt-br , entramos com o email do google,
+         autorizamos que acesse nosso Drive para que ele preencha a nossa planilha automaticamente, clicar em quero usar de modo
+         gratuito na parte de baixo, selecionamos Folha em branco, nesse momento ele ja criou a planilha, para abri-la clicamos em
+         Folha Vinculada(planilha do Excel), agora vamos voltar no codigo acima . Vamos colocar no form o Action e colar o http da planilha
+         e colocar o metodo que sera o Post  
+         Depois colocamos o codigo name="" required do Incorporar HTML do sheetmonkey nos input acima e no campo Redirecionamento bem-sucedido na pagina
+         do sheetmonkey colocamos um https que sera o redicionamento ao clicar no botao Acesse ementa gratis-> 
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--para criar um aquivo javascript, é uma particularidade do HTML 5 , termos que cria-lo aqui dentro do body-->
     <script src="index.js"></script>    
+
 </body>
 </html>
+
 
 

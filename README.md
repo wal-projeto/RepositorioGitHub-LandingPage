@@ -47,3 +47,11 @@ git config --global user.name "walquiria"
 Para saber qual é a nossa branche clicamos o repositorio LandingPage e embaixo no nome esta escrito main, depois desse passo pode que ele peca a configuracao da minha conta no github, clicamos em continuar em coneccao com o navegador, se eu ja estiver conectado na conta do github ele ja Autentica o github ou o Git na minha maquina automaticamente.
 
 9  nesse momento o Git na maquina local ja "SUBIU" lá no GitHub todas as minhas alteracoes realizadas no projeto.
+
+PROJETO LANDINGPAGE COM 5 SEGMENTAÇÕES:
+- Menu Superior (backgroud com imagem, texto justificado)
+- Menu Informacional
+- Sessão de Video
+- Sessão com Carrochel 
+- Sessão com Formulario(texto no centro da pagina, )
+Será necessario trabalhar com identificações "id" nas tags em cada segmentacao para poder construir estilos diferentes em cada uma delas.

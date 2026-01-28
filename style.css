@@ -1,62 +1,190 @@
-*{
-    margin: 5px;
-    font-family: 'inter';
-    
+
+/* ESTILIZACAO GERAL PARA A PAGINA COMO UM TODO: usamos o asteristico e abrimos e fechamos a chave no final do todo o codigo.*/
+*{  
+    /* brackgroud-color: black;  muda a cor do fundo da pagina */
+    /* margin: 0px; margem geral é 0, assim nos itens id conseguimos as margens exatas */
+    /* color: white; muda a cor do texto */
+    /* background-image: url(imagens/imagem-fundo1.svg);  muda a imagem de fundo da pagina */
+    margin: 0px;
+    font-family: 'inter', sans-serif; /*definindo a fonte geral da pagina */
+    font-size: 32px;
+
+
+
+/*ESTILIZACAO DO MENU SUPERIOR atraves das tags logo, titulo-superior e titulo-paragrafo*/    
 #logo{
-    margin-left: 50px;
+    /* width: 150px; -> define a largura da imagem */
+    margin-left: 100px; /*ajustando a margem esquerda do logo no menu superior*/
     margin-top: 50px
     
 }   
 
-#titulo-superior{
+#titulo-superior{  /*Dê os primeiros passos da sua carreira em Tecnologia*/
     margin-left: 150px;
     margin-top: 50px;
+    font-size: 50px;
 
 }
-#titulo-paragrafo{
+#titulo-paragrafo{  /*Inscreva-se no curso gratuito de Introdução à Tecnologia ... as efetivas.*/
     margin-left: 150px;
     margin-top: 25px;
-    padding-bottom: 100px; /*espaçamento entre o parágrafo e o final do menu*/
+    /*margin-bottom: 100px; -> define a margem inferior do parágrafo: VAMOS EXCLUIR PORQUE AQUI NAO VAI SERVIR DE NADA*/
+    padding-bottom: 100px; /*espaçamento entre o parágrafo(o content) e o final do menu para baixo(o padding). 
+    OBS: nesse momento precisamos entender o conceito de padding-> arquivo conceitoPadding.md. 
+    */
 }
 
-#menusuperior{
-    background-image: url(imagens/imagem-fundo1.svg);
+#menusuperior{  /* Essa é a div que engloba todo o menu superior */
+    background-image: url(imagens/imagem-fundo1.svg); /*definindo a imagem de fundo do menu superior*/
     color: aliceblue;
 
 }
+
+
+
+/*ESTILIZACAO DO MENU INFORMACIONAL atraves tag menuinformacional e das classes icones e textoinformativo
+GRID (aquivo GRID_OrganizacaoDePagina.jpg) para alinhar os itens em colunas e centraliza-los */
 #menuinformacional{
     background-color: #eaece5;
-    display: grid;
-    grid-auto-flow: column;
-    columns: auto;
+    display: grid; /*usando o grid para organizar os itens do menu informacional, ou seja, como será exibido*/
+    grid-auto-flow: column; /*definindo que os itens serão exibidos em colunas*/
+    columns: auto; /*definindo que as colunas terão tamanho automático*/
 }
 
+/* Classes: identifico que alguns elementos pertencem a uma mesma classe,
+então uso o ponto antes do nome da classe para estilizar todos os elementos que pertencem a essa classe. 
+No caso abaixo, todos os elementos com a classe "icones" terão a mesma estilização, ou seja as imagens. */
 .icones{
-    margin: 50px 0px 50px 150px;
-    padding: 25px;
+    /*margin-top: 50px; -> define a margem superior dos icones do menu informacional */
+    /*margin-left: 150px; -> define a margem esquerda dos icones do menu informacional */
+    /*margin-bottom: 50px; -> define a margem inferior dos icones do menu informacional */
+
+    /* MANEIRA MAIS SOFISTICADA: definindo as margens superior, direita, inferior e esquerda respectivamente */
+    margin: 50px 0px 50px 150px; 
+    padding: 25px; /* espaçamento entre o icone e o texto do menu informacional */
 }
+/* Classe textoinformativo: estilização dos textos do menu informacional: Certificado de conclusão; 4 horas de conteúdo e 
+Aulas online gravadas */
 .textoinformativo{
-    display: flex;
-    align-items: center;
+    display: flex; /* Usando flexbox para alinhar os itens */
+    align-items: center; /* Alinhando os itens ao centro verticalmente */
 }
 
+
+
+
+/*ESTILIZACAO DA SEÇÃO VIDEO atraves do id secaovideo e titulovideo*/
 #secaovideo{
-    display: grid;
-    grid-auto-flow: column;
-    columns: auto;
+    margin-left: 50px; /*definindo a margem esquerda da seção video*/
+    display: grid; /*usando o grid para organizar os itens da seção video*/
+    grid-template-columns: 1fr 1fr; /*definindo que teremos 2 colunas de tamanho igual, MANEIRA SIMPLES DE CRIAR 2 COLUNAS*/
+    
+
+    /*grid-auto-flow: column; /*definindo que os itens serão exibidos em colunas*/
+    /*columns: auto; /*definindo que as colunas terão tamanho automático*/
+    /*gap: 50px; /*definindo o espaçamento entre as colunas*/
+    /*Ao criar GRID significa que cada div ficara dentro de uma coluna, e para que possamos ter apenas 2 colunas seria necessario
+    colocar a div titulovideo DENTRO da div secaovideo lá no arquivo index.html, assim o video ficaria a esquerda e os textos a direita */
 }
 
 #titulovideo{
-    color: #247BA0;
+    color: #247BA0; /*definindo a cor do titulo do video: AZUL*/
+    margin-top: 40px; /*definindo a margem superior do titulo do video*/
+    font-size: 50px; /*definindo o tamanho da fonte do titulo do video*/
 }
 
-#textovideo{
+
+#video{  /*Agora vamos editar os espacamentos do video : */
+    margin: 50px 25px 50px 100px; /*definindo as margens do video: superior, direita, inferior e esquerda respectivamente*/
+    max-width: 100%; /*definindo a largura maxima do video para 100% do tamanho da coluna*/
+}
+
+
+
+/*ESTILIZACAO DA SEÇÃO CARROSSEL - LAYOUTS DA SEÇÃO E CADS(COM FOTO E TEXTO) DO CARROSSEL, INTRODUZINDO AQUI FINCIONALIDADES DO 
+JAVASCRIP PARA QUE O CARROSSEL SE MOVIMENTE CONFORME CLICAMOS NA SETA PARA A DIREITA OU PARA A ESQUERDA*/
+#carrossel{
+    background-color:#247BA0; /*definindo a cor de fundo do carrossel*/
+    padding: 50px; /*definindo o espaçamento entre o conteúdo e a borda do carrossel*/
+}
+
+#titulo-carrossel{
+    color: white; /*definindo a cor do titulo do carrossel*/
+    font-size:50px; /*definindo o tamanho da fonte do titulo do carrossel*/
+    text-align: center; /*centralizando o titulo do carrossel*/
+
+}
+
+#divcards{ /*div que engloba os cards do carrossel*/
+    margin-top: 30px; /*definindo a margem superior da div que engloba os cards*/
+    display: grid; /*usando o grid para organizar os itens da div que engloba os cards*/
+    grid-auto-flow: column; /*definindo que os itens serão exibidos em colunas*/
+}
+
+.cards{ /*classe cards: estilização dos cards do carrossel*/
+    margin-left: 10px; /*definindo a margem esquerda dos cards*/
+}
+
+#seta-esquerda{
+    display: none; /*escondendo a seta esquerda inicialmente utilizando o display*/
+}
+
+#leonardo{
+    display: none; /*escondendo o card do Leonardo inicialmente utilizando o display*/   
+}
+
+
+.seta{
+    margin:auto; /* Centraliza horizontalmente */
+    cursor: pointer /*Carrossel - Implementando Dinamismo no Layout */
+}
+
+.seta:hover{
+    transform: translateY(-10px);
+    transition:0,5s;
 
 }
 
 
 
 
+/*ESTILIZACAO dO FORMULARIO */
+#formulario{
+    text-align: center;
+}
+#titulo-formulario{
+    font-size:50px;
+    margin: 25px;
+    color: #383838;
+}
 
+input{
+    width: 600px;
+    height: 60px;
+    background: #9aaaa4;
+    margin: 20px;
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 15px;
+    color: #000000;
+}
 
+button{
+    background-color: #247BA0;
+    width: 500px;
+    height: 60px;
+    color: aliceblue;
+    margin: 20px;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #247BA0;
+    color: white;
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 20px #664c85;
+}
 }
