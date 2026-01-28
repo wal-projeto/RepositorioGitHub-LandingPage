@@ -55,3 +55,11 @@ PROJETO LANDINGPAGE COM 5 SEGMENTAÇÕES:
 - Sessão com Carrochel 
 - Sessão com Formulario(texto no centro da pagina, )
 Será necessario trabalhar com identificações "id" nas tags em cada segmentacao para poder construir estilos diferentes em cada uma delas.
+
+PROJETO DE WEB SITE LANDINGPAGE COMITADO NO GITHUB, AGORA PRECISAMOS HOSPEDA-LO PARA DEPLOY.
+- Utilizaremos o Netlify (https://www.netlify.com/  -> plataforma de hospedagem gratuita - desenvolvimento web nativa de IA)
+- Acessamos o site e associamos com o GitHub para transportar o projeto ao site( Autorizar autenticação Netlify)
+- Fazemos o  Deploy do projeto escolhemos o repositorio do GitHub chamado " RepositórioGitHub-LandingPage"
+- Ao fazer o Deploy ele mostra a Implantação em andamento(Deploy log; Deploy file browser, etc)
+- Em configuração rápita mudei o nome do projeto para landing-page-waloa, e ao clicar landing-page-waloa.netlify.app ja abra na web a landingpage. 
+- Acesso direto no meu projeo hospedado no Netlify:  https://app.netlify.com/projects/landing-page-waloa/overview 
